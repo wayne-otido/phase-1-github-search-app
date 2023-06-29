@@ -15,6 +15,7 @@ function submit(){
       }
     })
     .then(res => res.json())
+    .then(document.getElementById('user-list').innerHTML = " ")
     .then(data =>data.items.forEach(item => {
       let userAbout =document.createElement('div')
       userAbout.innerHTML =`
